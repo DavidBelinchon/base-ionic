@@ -2,7 +2,7 @@
 
 angular.module('starter')
 
-.controller('DashCtrl', function($scope) {
+.controller('LoginCtrl', function($scope) {
 	
 	
 	

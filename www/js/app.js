@@ -31,48 +31,41 @@ angular.module('starter', ['ionic'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
-
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('login', {
+    url: '/login',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'viewContent': {
+        templateUrl: 'templates/login.html',
+        controller: 'LoginCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
+  .state('chats', {
       url: '/chats',
       views: {
-        'tab-chats': {
+        'viewContent': {
           templateUrl: 'templates/tab-chats.html',
           controller: 'ChatsCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
+    .state('chat-detail', {
       url: '/chats/:chatId',
       views: {
-        'tab-chats': {
+        'viewContent': {
           templateUrl: 'templates/chat-detail.html',
           controller: 'ChatDetailCtrl'
         }
       }
     })
 
-  .state('tab.account', {
+  .state('account', {
     url: '/account',
     views: {
-      'tab-account': {
+      'viewContent': {
         templateUrl: 'templates/tab-account.html',
         controller: 'AccountCtrl'
       }
@@ -80,6 +73,6 @@ angular.module('starter', ['ionic'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/login');
 
 });
